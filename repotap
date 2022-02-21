@@ -1,11 +1,11 @@
 #!/bin/bash
 
 function createdir {
-	. ./scripts/create.sh
+	. create.sh
 }
 
 function removedir {
-	. ./scripts/remove.sh
+	. ./lib/remove.sh
 }
 ###
 
