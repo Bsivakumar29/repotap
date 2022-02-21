@@ -1,11 +1,13 @@
 #!/bin/bash
 
+file="https://github.com/Bsivakumar29/repotap/tree/main/lib"
+
 function createdir {
-	. create.sh
+	source /usr/local/Cellar/repotap/1.1.5/lib/create.sh
 }
 
 function removedir {
-	. ./lib/remove.sh
+	source /usr/local/Cellar/repotap/1.1.5/lib/remove.sh
 }
 ###
 
