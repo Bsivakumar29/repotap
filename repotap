@@ -1,0 +1,33 @@
+#!/bin/bash
+
+function createdir {
+	read -p "Give name for new directory:" directory
+	mkdir $directory
+	$directory created
+}
+
+function removedir {
+        read -p "Give name for old directory:" directory
+        rm -rf $directory
+        $directory created
+}
+###
+
+for arg in "$@"; do
+  if [[ "$arg" = -c ]] || [[ "$arg" = create ]]; then
+    ARG_CREATE_DIR=true
+  fi
+  if [[ "$arg" = -r ]] || [[ "$arg" = remove ]]; then
+    ARG_REMOVE_DIR=true
+  fi
+done
+
+###
+
+if [[ "$ARG_CREATE_DIR" = true ]]; then
+  createdir
+fi
+
+if [[ "$ARG_REMOVE_DIR" = true ]]; then
+  removedir
+fi
