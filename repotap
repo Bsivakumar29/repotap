@@ -1,13 +1,12 @@
-#!/bin/bash
-
-file="https://github.com/Bsivakumar29/repotap/tree/main/lib"
+#!/usr/bin/env bash
 
 function createdir {
-	source /usr/local/Cellar/repotap/1.1.5/lib/create.sh
+	app="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
+	source $app/create.sh
 }
 
 function removedir {
-	source /usr/local/Cellar/repotap/1.1.5/lib/remove.sh
+	source /usr/local/Cellar/repotap/1.1.6/lib/remove.sh
 }
 ###
 
