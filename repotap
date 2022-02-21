@@ -1,15 +1,11 @@
 #!/bin/bash
 
 function createdir {
-	read -p "Give name for new directory:" directory
-	mkdir $directory
-	$directory created
+	. /scripts/create.sh
 }
 
 function removedir {
-        read -p "Give name for old directory:" directory
-        rm -rf $directory
-        $directory created
+	. /scripts/remove.sh
 }
 ###
 
