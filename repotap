@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
 function createdir {
-	app="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
-	source $app/create.sh
+	source /usr/local/Cellar/repotap/*/lib/create.sh
 }
 
 function removedir {
-	source /usr/local/Cellar/repotap/1.1.6/lib/remove.sh
+	source /usr/local/Cellar/repotap/*/lib/remove.sh
 }
 ###
 
