@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
+Cellar=$(brew --cellar repotap)
 
 function createdir {
-	source /usr/local/Cellar/repotap/*/lib/create.sh
+	source $Cellar/*/lib/create.sh
 }
 
 function removedir {
-	source /usr/local/Cellar/repotap/*/lib/remove.sh
+	source $Cellar/*/lib/remove.sh
 }
 ###
 
